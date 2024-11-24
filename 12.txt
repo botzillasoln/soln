@@ -1,0 +1,30 @@
+
+CREATE TABLE railways (
+    train_id NUMBER PRIMARY KEY,
+    train_name VARCHAR2(100),
+    route VARCHAR2(100),
+    departure_time DATE,
+    arrival_time DATE,
+    seat_capacity NUMBER
+);
+
+-- Step 2: Insert records
+INSERT INTO railways (train_id, train_name, route, departure_time, arrival_time, seat_capacity)
+VALUES
+    (1, 'Express A', 'Delhi to Mumbai', TO_DATE('2024-11-25 08:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-11-25 20:00:00', 'YYYY-MM-DD HH24:MI:SS'), 500);
+
+INSERT INTO railways (train_id, train_name, route, departure_time, arrival_time, seat_capacity)
+VALUES
+    (2, 'Shatabdi B', 'Chennai to Bangalore', TO_DATE('2024-11-25 06:30:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-11-25 11:30:00', 'YYYY-MM-DD HH24:MI:SS'), 300);
+
+INSERT INTO railways (train_id, train_name, route, departure_time, arrival_time, seat_capacity)
+VALUES
+    (3, 'Superfast C', 'Kolkata to Delhi', TO_DATE('2024-11-25 09:00:00', 'YYYY-MM-DD HH24:MI:SS'), TO_DATE('2024-11-25 21:30:00', 'YYYY-MM-DD HH24:MI:SS'), 600);
+
+-- Step 3: Update a record (increase seat capacity for train with train_id 1)
+UPDATE railways
+SET seat_capacity = 550
+WHERE train_id = 1;
+
+
+SELECT * FROM railways WHERE train_id = 1;
