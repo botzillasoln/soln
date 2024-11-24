@@ -21,3 +21,4 @@ VALUES (4, 'Alice Brown', 104, 'Marketing', 'MK04', 47000.00);
 
 INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT_NO, DEPARTMENT_NAME, JOB_ID, SALARY)
 VALUES (5, 'Charlie Green', 105, 'Operations', 'OP05', 60000.00);
+SELECT * FROM Employee;
