@@ -1,0 +1,32 @@
+CREATE TABLE Employee (
+    EMP_NO NUMBER(10),
+    NAME VARCHAR2(100),
+    DEPARTMENT_NO NUMBER(5)
+);
+
+-- Insert data immediately
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT_NO)
+VALUES (1, 'John Doe', 101);
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT_NO)
+VALUES (2, 'Jane Smith', 102);
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT_NO)
+VALUES (3, 'Bob Johnson', 103);
+
+ALTER TABLE Employee
+ADD (SALARY NUMBER(10, 2), JOB_ID VARCHAR2(10));
+
+ALTER TABLE Employee
+MODIFY NAME VARCHAR2(150);
+
+ALTER TABLE Employee
+DROP COLUMN DEPARTMENT_NO;
+
+RENAME Employee TO Employee_Details;
+
+INSERT INTO Employee_Details (EMP_NO, NAME, SALARY, JOB_ID)
+VALUES (4, 'Alice Brown', 48000.00, 'MK04');
+INSERT INTO Employee_Details (EMP_NO, NAME, SALARY, JOB_ID)
+VALUES (5, 'Charlie Green', 60000.00, 'OP05');
+
+SELECT * FROM Employee_Details;
+
