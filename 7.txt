@@ -1,0 +1,28 @@
+CREATE TABLE Person (
+    FIRST_NAME VARCHAR2(50), -- First name of the person
+    LAST_NAME VARCHAR2(50),  -- Last name of the person
+    ADDRESS VARCHAR2(100),   -- Address of the person
+    CITY VARCHAR2(50)        -- City of residence
+);
+-- Insert sample data into the Person table
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('john', 'doe', ' 123 Main Street', 'new york');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('JANE', 'SMITH', '456 Elm St ', 'LOS ANGELES');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('ALICE', 'brown', ' 789 Oak Avenue', 'san francisco');
+
+SELECT INITCAP(FIRST_NAME) AS FIRST_NAME_CAPITALIZED,
+       INITCAP(LAST_NAME) AS LAST_NAME_CAPITALIZED,
+       INITCAP(CITY) AS CITY_CAPITALIZED
+FROM Person;
+
+SELECT LTRIM(ADDRESS) AS TRIMMED_ADDRESS
+FROM Person;
+
+SELECT UPPER(FIRST_NAME) AS UPPERCASE_FIRST_NAME,
+       UPPER(LAST_NAME) AS UPPERCASE_LAST_NAME,
+       UPPER(CITY) AS UPPERCASE_CITY
+FROM Person;
