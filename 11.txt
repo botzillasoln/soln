@@ -1,0 +1,49 @@
+CREATE TABLE airlines (
+    airline_id INT PRIMARY KEY,
+    airline_name VARCHAR(100),
+    country VARCHAR(50),
+    foundation_year INT,
+    fleet_size INT
+);
+INSERT INTO airlines (airline_id, airline_name, country, foundation_year, fleet_size)
+VALUES (1, 'Airline A', 'USA', 1990, 150);
+
+INSERT INTO airlines (airline_id, airline_name, country, foundation_year, fleet_size)
+VALUES (2, 'Airline B', 'Canada', 2000, 80);
+
+INSERT INTO airlines (airline_id, airline_name, country, foundation_year, fleet_size)
+VALUES (3, 'Airline C', 'India', 1985, 120);
+
+INSERT INTO airlines (airline_id, airline_name, country, foundation_year, fleet_size)
+VALUES (4, 'Airline D', 'UK', 2010, 50);
+
+INSERT INTO airlines (airline_id, airline_name, country, foundation_year, fleet_size)
+VALUES (5, 'Airline E', 'Australia', 1995, 200);
+
+
+ALTER TABLE airlines
+ADD website VARCHAR(100);
+
+UPDATE airlines
+SET website = 'www.airlinea.com'
+WHERE airline_id = 1;
+
+UPDATE airlines
+SET website = 'www.airlineb.ca'
+WHERE airline_id = 2;
+
+UPDATE airlines
+SET website = 'www.airlinec.in'
+WHERE airline_id = 3;
+
+UPDATE airlines
+SET website = 'www.airlined.co.uk'
+WHERE airline_id = 4;
+
+UPDATE airlines
+SET website = 'www.airlinee.com.au'
+WHERE airline_id = 5;
+
+
+SELECT * FROM airlines;
+
