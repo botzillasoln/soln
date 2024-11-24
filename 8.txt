@@ -1,0 +1,28 @@
+CREATE TABLE Person (
+    FIRST_NAME VARCHAR2(50),  -- First name of the person
+    LAST_NAME VARCHAR2(50),   -- Last name of the person
+    ADDRESS VARCHAR2(100),    -- Address of the person
+    CITY VARCHAR2(50)         -- City of residence
+);
+-- Insert sample data into the Person table
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('John', 'Doe', '123 Main Street', 'New York');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('Jane', 'Smith', '456 Elm St', 'Los Angeles');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('Alice', 'Brown', '789 Oak Avenue', 'San Francisco');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('Bob', 'Johnson', '101 Pine St', 'Chicago');
+
+INSERT INTO Person (FIRST_NAME, LAST_NAME, ADDRESS, CITY)
+VALUES ('Charlie', 'Green', '202 Maple Road', 'Miami');
+
+SELECT COUNT(*) AS Total_People
+FROM Person;
+SELECT AVG(LENGTH(FIRST_NAME)) AS Avg_First_Name_Length
+FROM Person;
+SELECT MAX(LENGTH(LAST_NAME)) AS Max_Last_Name_Length
+FROM Person;
