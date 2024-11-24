@@ -1,0 +1,30 @@
+CREATE TABLE Employee (
+    EMP_NO NUMBER(10) PRIMARY KEY, -- Employee number
+    NAME VARCHAR2(100),            -- Employee name
+    DEPARTMENT VARCHAR2(50),       -- Department name
+    SALARY NUMBER(10, 2)           -- Salary
+);
+-- Insert sample data into the Employee table
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT, SALARY)
+VALUES (1, 'John Doe', 'HR', 50000.00);
+
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT, SALARY)
+VALUES (2, 'Jane Smith', 'IT', 60000.00);
+
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT, SALARY)
+VALUES (3, 'Alice Brown', 'Finance', 55000.00);
+
+INSERT INTO Employee (EMP_NO, NAME, DEPARTMENT, SALARY)
+VALUES (4, 'Bob Johnson', 'Marketing', 48000.00);
+
+UPDATE Employee
+SET SALARY = SALARY * 1.10 -- Increase salary by 10%
+WHERE EMP_NO = 2;          -- For Jane Smith
+
+UPDATE Employee
+SET DEPARTMENT = 'Operations'
+WHERE EMP_NO = 4; -- For Bob Johnson
+
+-- View all data in the Employee table
+SELECT * FROM Employee;
+
