@@ -1,11 +1,13 @@
 DECLARE
-    sum_of_odds NUMBER := 0;  -- Variable to store the sum
+    first_value NUMBER := :FIRST_VALUE;  -- Fixed value for the number of odd numbers to sum
+    sum_of_odds NUMBER := 0;  -- Variable to store the sum of odd numbers
 BEGIN
-    FOR i IN 1..5 LOOP  -- Loop from 1 to 5 to get the first 5 odd numbers
-        sum_of_odds := sum_of_odds + (2*i - 1);  -- Add the odd number to sum
+    -- Using a FOR loop to sum the first 'first_value' odd numbers
+    FOR i IN 1..first_value LOOP
+        sum_of_odds := sum_of_odds + (2*i - 1);  -- Add the i-th odd number to sum
     END LOOP;
     
     -- Output the result
-    DBMS_OUTPUT.PUT_LINE('Sum of the first 5 odd numbers is: ' || sum_of_odds);
+    DBMS_OUTPUT.PUT_LINE('Sum of the first ' || first_value || ' odd numbers is: ' || sum_of_odds);
 END;
 /
