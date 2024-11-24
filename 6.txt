@@ -1,0 +1,26 @@
+CREATE TABLE Student (
+    STU_NO NUMBER(10) PRIMARY KEY,   -- Student number
+    NAME VARCHAR2(100),              -- Student name
+    SUBJECT VARCHAR2(50),            -- Subject name
+    DEPARTMENT_NAME VARCHAR2(50),    -- Department name
+    MARKS NUMBER(5)                  -- Marks
+);
+-- Insert sample data into the Student table
+INSERT INTO Student (STU_NO, NAME, SUBJECT, DEPARTMENT_NAME, MARKS)
+VALUES (1, 'Alice Johnson', 'Mathematics', 'Science', 20);
+
+INSERT INTO Student (STU_NO, NAME, SUBJECT, DEPARTMENT_NAME, MARKS)
+VALUES (2, 'Bob Smith', 'Physics', 'Science', 18);
+
+INSERT INTO Student (STU_NO, NAME, SUBJECT, DEPARTMENT_NAME, MARKS)
+VALUES (3, 'Charlie Brown', 'Chemistry', 'Science', 14);
+
+INSERT INTO Student (STU_NO, NAME, SUBJECT, DEPARTMENT_NAME, MARKS)
+VALUES (4, 'Diana Prince', 'Biology', 'Arts', 16);
+
+INSERT INTO Student (STU_NO, NAME, SUBJECT, DEPARTMENT_NAME, MARKS)
+VALUES (5, 'Ethan Hunt', 'English', 'Arts', 12);
+
+SELECT * 
+FROM Student
+WHERE MARKS > 15;
