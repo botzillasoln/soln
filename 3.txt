@@ -1,0 +1,25 @@
+CREATE TABLE Student (
+    STUDENT_ID NUMBER(10) PRIMARY KEY, -- Unique ID for the student
+    NAME VARCHAR2(100),               -- Student's name
+    AGE NUMBER(3),                    -- Age of the student
+    CLASS VARCHAR2(20),               -- Class of the student
+    GRADE CHAR(1)                     -- Grade (e.g., A, B, C)
+);
+-- Insert sample data into the Student table
+INSERT INTO Student (STUDENT_ID, NAME, AGE, CLASS, GRADE)
+VALUES (1, 'Alice Johnson', 18, '12th Grade', 'A');
+
+INSERT INTO Student (STUDENT_ID, NAME, AGE, CLASS, GRADE)
+VALUES (2, 'Bob Smith', 17, '11th Grade', 'B');
+
+INSERT INTO Student (STUDENT_ID, NAME, AGE, CLASS, GRADE)
+VALUES (3, 'Charlie Brown', 18, '12th Grade', 'A');
+
+INSERT INTO Student (STUDENT_ID, NAME, AGE, CLASS, GRADE)
+VALUES (4, 'Diana Prince', 16, '10th Grade', 'A');
+
+INSERT INTO Student (STUDENT_ID, NAME, AGE, CLASS, GRADE)
+VALUES (5, 'Ethan Hunt', 17, '11th Grade', 'C');
+
+-- View all data in the Student table
+SELECT * FROM Student;
