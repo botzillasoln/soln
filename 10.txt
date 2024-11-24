@@ -1,1 +1,11 @@
-USS CODE KI MAA HUDD GAYI HE YARR
+DECLARE
+    sum_of_odds NUMBER := 0;  -- Variable to store the sum
+BEGIN
+    FOR i IN 1..5 LOOP  -- Loop from 1 to 5 to get the first 5 odd numbers
+        sum_of_odds := sum_of_odds + (2*i - 1);  -- Add the odd number to sum
+    END LOOP;
+    
+    -- Output the result
+    DBMS_OUTPUT.PUT_LINE('Sum of the first 5 odd numbers is: ' || sum_of_odds);
+END;
+/
